@@ -14,13 +14,13 @@
     }
 
     const genAI = new GoogleGenerativeAI(API_KEY);
-    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    // PENTING: Ganti model ke 'gemini-2.0-flash' untuk kompatibilitas yang lebih baik
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" }); 
 
     // Konfigurasi CORS
-    // PENTING: Ganti dengan URL LENGKAP dari GitHub Pages Anda
-    // Contoh: 'https://username.github.io/nama-repo-portofolio'
+    // PENTING: Gunakan URL LENGKAP dari domain dasar GitHub Pages Anda
     const corsOptions = {
-        origin: 'https://ahmadtajudin1010.github.io', // <<< PASTIKAN INI HANYA DOMAIN DASAR!
+        origin: 'https://ahmadtajudin1010.github.io', // Ini sudah benar
         optionsSuccessStatus: 200
     };
 
